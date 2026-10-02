@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Swaram - Music for Every Mood</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <span class="brand-icon">♫</span>
+        <span>SWARAM</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html" class="active">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="albums.html">
+            <span>▣</span>
+            Albums
+        </a>
+
+        <a href="#telugu">
+            <span>♫</span>
+            Telugu
+        </a>
+
+        <a href="#hindi">
+            <span>♫</span>
+            Hindi
+        </a>
+
+        <a href="#english">
+            <span>♫</span>
+            English
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <p>Your Library</p>
+
+        <a href="#">
+            ♡ Liked Songs
+        </a>
+
+        <a href="#">
+            ⊕ Create Playlist
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main">
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div class="search">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search songs, artists or albums..."
+                onkeyup="searchMusic()"
+            >
+
+        </div>
+
+        <div class="profile">
+            <span class="profile-icon">H</span>
+            <span>Music Lover</span>
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                YOUR MUSIC. YOUR MOOD.
+            </p>
+
+            <h1>
+                Music that<br>
+                <span>speaks to you.</span>
+            </h1>
+
+            <p>
+                Explore the best of Telugu, Hindi and English music
+                all in one place.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button onclick="playFeatured()">
+                    ▶ Play Now
+                </button>
+
+                <button class="secondary"
+                        onclick="location.href='albums.html'">
+                    Explore Albums
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-disc">
+
+            <div class="disc">
+
+                <div class="disc-center">
+                    ♫
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK CATEGORIES -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Browse by Language</h2>
+
+            <a href="albums.html">
+                View All →
+            </a>
+
+        </div>
+
+        <div class="language-grid">
+
+            <div class="language-card telugu"
+                 onclick="filterLanguage('telugu')">
+
+                <span>తె</span>
+
+                <div>
+                    <h3>Telugu</h3>
+                    <p>Melodies & Mass Beats</p>
+                </div>
+
+            </div>
+
+
+            <div class="language-card hindi"
+                 onclick="filterLanguage('hindi')">
+
+                <span>हि</span>
+
+                <div>
+                    <h3>Hindi</h3>
+                    <p>Bollywood & Indie</p>
+                </div>
+
+            </div>
+
+
+            <div class="language-card english"
+                 onclick="filterLanguage('english')">
+
+                <span>EN</span>
+
+                <div>
+                    <h3>English</h3>
+                    <p>Pop & Global Hits</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TELUGU -->
+
+    <section class="section" id="telugu">
+
+        <div class="section-title">
+
+            <h2>Telugu Hits</h2>
+
+            <a href="albums.html">
+                See All →
+            </a>
+
+        </div>
+
+
+        <div class="album-grid">
+
+            <div class="album-card"
+                 data-language="telugu"
+                 data-title="Telugu Melodies">
+
+                <div class="album-image telugu-cover">
+                    <span>🎵</span>
+                </div>
+
+                <h3>Telugu Melodies</h3>
+
+                <p>Romantic Collection</p>
+
+                <button onclick="playSong('Telugu Melodies')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="telugu"
+                 data-title="Mass Beats">
+
+                <div class="album-image mass-cover">
+                    <span>🔥</span>
+                </div>
+
+                <h3>Mass Beats</h3>
+
+                <p>Telugu Party Hits</p>
+
+                <button onclick="playSong('Mass Beats')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="telugu"
+                 data-title="Soulful Telugu">
+
+                <div class="album-image soul-cover">
+                    <span>💜</span>
+                </div>
+
+                <h3>Soulful Telugu</h3>
+
+                <p>Beautiful Melodies</p>
+
+                <button onclick="playSong('Soulful Telugu')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="telugu"
+                 data-title="Tollywood Vibes">
+
+                <div class="album-image tollywood-cover">
+                    <span>🎬</span>
+                </div>
+
+                <h3>Tollywood Vibes</h3>
+
+                <p>Movie Favorites</p>
+
+                <button onclick="playSong('Tollywood Vibes')">
+                    ▶
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HINDI -->
+
+    <section class="section" id="hindi">
+
+        <div class="section-title">
+
+            <h2>Hindi Favorites</h2>
+
+            <a href="albums.html">
+                See All →
+            </a>
+
+        </div>
+
+
+        <div class="album-grid">
+
+            <div class="album-card"
+                 data-language="hindi"
+                 data-title="Bollywood Love">
+
+                <div class="album-image bollywood-cover">
+                    <span>❤️</span>
+                </div>
+
+                <h3>Bollywood Love</h3>
+
+                <p>Romantic Hindi Songs</p>
+
+                <button onclick="playSong('Bollywood Love')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="hindi"
+                 data-title="Hindi Party">
+
+                <div class="album-image party-cover">
+                    <span>🎉</span>
+                </div>
+
+                <h3>Hindi Party</h3>
+
+                <p>Dance Floor Hits</p>
+
+                <button onclick="playSong('Hindi Party')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="hindi"
+                 data-title="Arijit Collection">
+
+                <div class="album-image arijit-cover">
+                    <span>🎤</span>
+                </div>
+
+                <h3>Melody Collection</h3>
+
+                <p>Hindi Soulful Songs</p>
+
+                <button onclick="playSong('Melody Collection')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="hindi"
+                 data-title="Bollywood Classics">
+
+                <div class="album-image classic-cover">
+                    <span>🎼</span>
+                </div>
+
+                <h3>Bollywood Classics</h3>
+
+                <p>Evergreen Favorites</p>
+
+                <button onclick="playSong('Bollywood Classics')">
+                    ▶
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ENGLISH -->
+
+    <section class="section" id="english">
+
+        <div class="section-title">
+
+            <h2>English Hits</h2>
+
+            <a href="albums.html">
+                See All →
+            </a>
+
+        </div>
+
+
+        <div class="album-grid">
+
+            <div class="album-card"
+                 data-language="english"
+                 data-title="Pop Essentials">
+
+                <div class="album-image pop-cover">
+                    <span>🎧</span>
+                </div>
+
+                <h3>Pop Essentials</h3>
+
+                <p>Global Pop Hits</p>
+
+                <button onclick="playSong('Pop Essentials')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="english"
+                 data-title="Chill Vibes">
+
+                <div class="album-image chill-cover">
+                    <span>🌙</span>
+                </div>
+
+                <h3>Chill Vibes</h3>
+
+                <p>Relaxing Music</p>
+
+                <button onclick="playSong('Chill Vibes')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="english"
+                 data-title="Rock Legends">
+
+                <div class="album-image rock-cover">
+                    <span>🎸</span>
+                </div>
+
+                <h3>Rock Legends</h3>
+
+                <p>Classic Rock Collection</p>
+
+                <button onclick="playSong('Rock Legends')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="album-card"
+                 data-language="english"
+                 data-title="Acoustic Mornings">
+
+                <div class="album-image acoustic-cover">
+                    <span>🎸</span>
+                </div>
+
+                <h3>Acoustic Mornings</h3>
+
+                <p>Peaceful Acoustic Songs</p>
+
+                <button onclick="playSong('Acoustic Mornings')">
+                    ▶
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SONG LIST -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>Trending Now</h2>
+
+        </div>
+
+
+        <div class="song-list">
+
+            <div class="song">
+
+                <span class="song-number">01</span>
+
+                <div class="song-icon">🎵</div>
+
+                <div class="song-info">
+                    <h4>Beautiful Melody</h4>
+                    <p>Telugu • Romantic</p>
+                </div>
+
+                <span class="song-time">4:12</span>
+
+                <button onclick="playSong('Beautiful Melody')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="song">
+
+                <span class="song-number">02</span>
+
+                <div class="song-icon">❤️</div>
+
+                <div class="song-info">
+                    <h4>Love Story</h4>
+                    <p>Hindi • Romantic</p>
+                </div>
+
+                <span class="song-time">4:05</span>
+
+                <button onclick="playSong('Love Story')">
+                    ▶
+                </button>
+
+            </div>
+
+
+            <div class="song">
+
+                <span class="song-number">03</span>
+
+                <div class="song-icon">🎧</div>
+
+                <div class="song-info">
+                    <h4>Midnight Dreams</h4>
+                    <p>English • Chill</p>
+                </div>
+
+                <span class="song-time">3:48</span>
+
+                <button onclick="playSong('Midnight Dreams')">
+                    ▶
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- MUSIC PLAYER -->
+
+<div class="player">
+
+    <div class="now-playing">
+
+        <div class="mini-cover">
+            ♫
+        </div>
+
+        <div>
+            <h4 id="currentSong">Nothing Playing</h4>
+            <p id="currentArtist">Choose a song</p>
+        </div>
+
+    </div>
+
+
+    <div class="player-controls">
+
+        <button>↶</button>
+
+        <button class="play-button"
+                id="mainPlay"
+                onclick="togglePlayer()">
+            ▶
+        </button>
+
+        <button>↷</button>
+
+    </div>
+
+
+    <div class="progress-area">
+
+        <span>0:00</span>
+
+        <div class="progress">
+            <div class="progress-fill"></div>
+        </div>
+
+        <span>4:00</span>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
