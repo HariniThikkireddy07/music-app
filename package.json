@@ -1,0 +1,12 @@
+{
+  "name": "swaram-music-app",
+  "version": "1.0.0",
+  "description": "Static music application featuring Telugu, Hindi and English albums",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
